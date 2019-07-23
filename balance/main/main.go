@@ -16,7 +16,7 @@ func main() {
 		}
 		arr = append(arr, newInstance)
 	}
-	balancer := balance.RandomBalance{}
+	balancer := balance.RandomBalance{} //创建接口实现类对象，赋值给接口
 	for {
 		in, err := balancer.Dobalance(arr)
 		if err == nil {
