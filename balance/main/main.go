@@ -16,14 +16,10 @@ func main() {
 		}
 		arr = append(arr, newInstance)
 	}
-	balancer := balance.RandomBalance{} //创建接口实现类对象，赋值给接口
+	regist := balance.RegistBalance{}
 	for {
-		in, err := balancer.Dobalance(arr)
-		if err == nil {
-			fmt.Println(in)
-		} else {
-			fmt.Println(err.Error())
-		}
+		instance,_ := regist.Dobalance(arr,"Round")
+		fmt.Println(instance)
 		time.Sleep(time.Second)
 	}
 }
